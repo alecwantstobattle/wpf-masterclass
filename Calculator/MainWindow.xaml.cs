@@ -23,6 +23,7 @@ namespace Calculator
         public MainWindow()
         {
             InitializeComponent();
+            resultLabel.Content = "14321";
         }
     }
 }

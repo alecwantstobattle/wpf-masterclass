@@ -4,4 +4,6 @@
 
 /.vs
 /HelloWPF/obj/Debug
+/HelloWPF/bin/Debug
 /Calculator/obj/Debug
+/Calculator/bin/Debug
