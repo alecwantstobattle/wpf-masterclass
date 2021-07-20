@@ -174,6 +174,13 @@ namespace Calculator
 
         public static double Divide(double number1, double number2)
         {
+            if (number2 == 0)
+            {
+                MessageBox.Show("Division by 0 is not supported", "Wrong operation", MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+                return 0;
+            }
+
             return number1 / number2;
         }
     }
