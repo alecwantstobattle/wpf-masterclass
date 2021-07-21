@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWPF", "HelloWPF\HelloW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{A7052506-6D59-4B48-890B-55858B4F4DFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpPractice", "CSharpPractice\CSharpPractice.csproj", "{F0BBE37A-2947-4B2F-86BE-853E2EA0378B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A7052506-6D59-4B48-890B-55858B4F4DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7052506-6D59-4B48-890B-55858B4F4DFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7052506-6D59-4B48-890B-55858B4F4DFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0BBE37A-2947-4B2F-86BE-853E2EA0378B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0BBE37A-2947-4B2F-86BE-853E2EA0378B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0BBE37A-2947-4B2F-86BE-853E2EA0378B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0BBE37A-2947-4B2F-86BE-853E2EA0378B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
