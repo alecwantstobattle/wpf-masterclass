@@ -26,7 +26,8 @@ namespace DesktopContactApp
 
         private void saveButton_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            // Save contact
+            Close();
         }
     }
 }
