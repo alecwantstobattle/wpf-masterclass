@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpPractice", "CSharpPractice\CSharpPractice.csproj", "{F0BBE37A-2947-4B2F-86BE-853E2EA0378B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopContactApp", "DesktopContactApp\DesktopContactApp.csproj", "{C27B8D4B-D16F-4088-9E20-AC06FB1E2B7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F0BBE37A-2947-4B2F-86BE-853E2EA0378B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0BBE37A-2947-4B2F-86BE-853E2EA0378B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0BBE37A-2947-4B2F-86BE-853E2EA0378B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C27B8D4B-D16F-4088-9E20-AC06FB1E2B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C27B8D4B-D16F-4088-9E20-AC06FB1E2B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C27B8D4B-D16F-4088-9E20-AC06FB1E2B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C27B8D4B-D16F-4088-9E20-AC06FB1E2B7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
