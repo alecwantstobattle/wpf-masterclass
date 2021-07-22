@@ -12,15 +12,9 @@ namespace CSharpPractice
         private static double numberTwo = 12.34;
         static void Main(string[] args)
         {
-            //if (numberTwo == 1)
-            //{
-            //    var numberThree = 12f;
-            //}
-
-            //var numberOne = 23.45;
-            //Console.WriteLine(numberOne);
-             
-            //Console.WriteLine(SimpleMath.Add(numberOne, numberTwo));
+            BankAccount bankAccount = new BankAccount();
+            bankAccount.AddToBalance(100);
+            Console.WriteLine(bankAccount.Balance);
 
             Console.ReadLine();
         }

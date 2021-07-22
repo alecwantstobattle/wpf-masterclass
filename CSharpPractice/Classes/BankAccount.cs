@@ -23,9 +23,14 @@ namespace CSharpPractice.Classes
             {
                 if(value > 0)
                     balance = value;
-
-                balance = 0;
+                else
+                    balance = 0;
             }
+        }
+
+        public BankAccount()
+        {
+            Balance = 100;
         }
 
         public double AddToBalance(double balanceToBeAdded)
