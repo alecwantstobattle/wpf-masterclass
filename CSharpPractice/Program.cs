@@ -16,6 +16,10 @@ namespace CSharpPractice
             bankAccount.AddToBalance(100);
             Console.WriteLine(bankAccount.Balance);
 
+            ChildBankAccount childBankAccount = new ChildBankAccount();
+            childBankAccount.AddToBalance(10);
+            Console.WriteLine(childBankAccount.Balance);
+
             Console.ReadLine();
         }
     }
