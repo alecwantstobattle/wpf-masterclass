@@ -8,9 +8,30 @@ namespace CSharpPractice.Classes
 {
     public class BankAccount
     {
-        public double AddToBalance(double balanceToBeAdded)
+        private double balance;
+
+        public double Balance
         {
-            return balanceToBeAdded;
+            get
+            {
+                if (balance < 1000000)
+                    return balance;
+
+                return balance;
+            }
+            private set
+            {
+                if(value > 0)
+                    balance = value;
+
+                balance = 0;
+            }
+        }
+
+        public double AddToBalance(double balanceToBeAdded)
+        {   
+            Balance += balanceToBeAdded;
+            return balance;
         }
     }
 }
