@@ -12,23 +12,22 @@ namespace CSharpPractice
         private static double numberTwo = 12.34;
         static void Main(string[] args)
         {
-            double[] numbers = new double[] {1, 2, 3, 42, 42154};
-            var result = SimpleMath.Add(numbers);
-            Console.WriteLine(result);
-
-            BankAccount bankAccount = new BankAccount();
+            ChildBankAccount bankAccount = new ChildBankAccount();
             bankAccount.AddToBalance(100);
-            Console.WriteLine(bankAccount.Balance);
 
-            ChildBankAccount childBankAccount = new ChildBankAccount();
-            childBankAccount.AddToBalance(10);
-            Console.WriteLine(childBankAccount.Balance);
+            SimpleMath simpleMath = new SimpleMath();
+            Console.WriteLine(Information(simpleMath));
 
             Console.ReadLine();
         }
+
+        private static string Information(IInformation information)
+        {
+            return information.GetInformation();
+        }
     }
 
-    class SimpleMath
+    class SimpleMath: IInformation
     {
         public static double Add(double number1, double number2)
         {
@@ -44,6 +43,11 @@ namespace CSharpPractice
             }
 
             return result;
+        }
+
+        public string GetInformation()
+        {
+            return "Class that solves simple math.";
         }
     }
 }

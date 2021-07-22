@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpPractice.Classes
 {
-    public class BankAccount
+    public class BankAccount: IInformation
     {
         private double balance;
 
@@ -42,6 +42,11 @@ namespace CSharpPractice.Classes
         {   
             Balance += balanceToBeAdded;
             return balance;
+        }
+
+        public string GetInformation()
+        {
+            return $"Your current balance is: {Balance:c}";
         }
     }
 
