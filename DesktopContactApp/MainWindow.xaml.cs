@@ -38,10 +38,25 @@ namespace DesktopContactApp
 
         void ReadDatabase()
         {
+            List<Contact> contacts;
+
             using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
             {
                 connection.CreateTable<Contact>();
-                var contacts = connection.Table<Contact>().ToList();
+                contacts = connection.Table<Contact>().ToList();
+            }
+
+            if (contacts != null)
+            {
+                //foreach (var contact in contacts)
+                //{
+                //    contactsListView.Items.Add(new ListViewItem()
+                //    {
+                //        Content = contact
+                //    });
+                //}
+
+                contactsListView.ItemsSource = contacts;
             }
         }
     }
