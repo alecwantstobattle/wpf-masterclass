@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -59,8 +58,12 @@ namespace LandmarkAI
                 {
                     content.Headers.ContentType = new MediaTypeHeaderValue(content_type);
                     var response = await client.PostAsync(url, content);
+
+                    var responseString = await response.Content.ReadAsStringAsync();
                 }
             }
         }
+
+        
     }
 }
