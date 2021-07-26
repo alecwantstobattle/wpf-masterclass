@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpPractice", "CSharpPra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopContactApp", "DesktopContactApp\DesktopContactApp.csproj", "{C27B8D4B-D16F-4088-9E20-AC06FB1E2B7C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandmarkAI", "LandmarkAI\LandmarkAI.csproj", "{6CC32718-99D9-4A43-9259-436D00AF40B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C27B8D4B-D16F-4088-9E20-AC06FB1E2B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C27B8D4B-D16F-4088-9E20-AC06FB1E2B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C27B8D4B-D16F-4088-9E20-AC06FB1E2B7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CC32718-99D9-4A43-9259-436D00AF40B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CC32718-99D9-4A43-9259-436D00AF40B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CC32718-99D9-4A43-9259-436D00AF40B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CC32718-99D9-4A43-9259-436D00AF40B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
