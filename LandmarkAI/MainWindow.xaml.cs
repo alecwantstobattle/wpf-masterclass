@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -35,6 +38,28 @@ namespace LandmarkAI
             {
                 string fileName = dialog.FileName;
                 selectedImage.Source = new BitmapImage(new Uri(fileName));
+
+                MakePredictionAsync(fileName);
+            }
+        }
+
+        private async void MakePredictionAsync(string fileName)
+        {
+            string url = "";
+            string prediction_key = "";
+            string content_type = "application/octet-stream";
+
+            var file = File.ReadAllBytes(fileName);
+
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("Prediction-Key", prediction_key);
+
+                using (var content = new ByteArrayContent(file))
+                {
+                    content.Headers.ContentType = new MediaTypeHeaderValue(content_type);
+                    var response = await client.PostAsync(url, content);
+                }
             }
         }
     }
