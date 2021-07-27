@@ -1,98 +1,300 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
 
 namespace WeatherApp.Model
 {
-    class WeatherUnderground
+    public class Image : INotifyPropertyChanged
     {
-        public Response response { get; set; }
-        public CurrentObservation current_observation { get; set; }
+        private string url;
+        public string Url
+        {
+            get
+            {
+                return url;
+            }
+
+            set
+            {
+                url = value;
+                OnPropertyChanged("Url");
+            }
+        }
+
+        private string title;
+
+        public string Title
+        {
+            get { return title; }
+            set
+            {
+                title = value;
+                OnPropertyChanged("Title");
+            }
+        }
+
+        private string link;
+
+        public string Link
+        {
+            get { return link; }
+            set
+            {
+                link = value;
+                OnPropertyChanged("Link");
+            }
+        }
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 
-    public class CurrentObservation
+    public class Location : INotifyPropertyChanged
     {
-        public Image image { get; set; }
-        public Location display_location { get; set; }
-        public Location observation_location { get; set; }
-        public string observation_time { get; set; }
-        public string observation_time_rfc822 { get; set; }
-        public string observation_epoch { get; set; }
-        public string local_time_rfc822 { get; set; }
-        public string local_epoch { get; set; }
-        public string local_tz_short { get; set; }
-        public string local_tz_long { get; set; }
-        public string local_tz_offset { get; set; }
-        public string weather { get; set; }
-        public string temperature_string { get; set; }
-        public string temp_f { get; set; }
-        public string temp_c { get; set; }
-        public string relative_humidity { get; set; }
-        public string wind_string { get; set; }
-        public string wind_dir { get; set; }
-        public int wind_degrees { get; set; }
-        public double wind_mph { get; set; }
-        public string wind_gust_mph { get; set; }
-        public double wind_kph { get; set; }
-        public string wind_gust_kph { get; set; }
-        public string pressure_mb { get; set; }
-        public string pressure_in { get; set; }
-        public string pressure_trend { get; set; }
-        public string dewpoint_string { get; set; }
-        public int dewpoint_f { get; set; }
-        public int dewpoint_c { get; set; }
-        public string heat_index_string { get; set; }
-        public string heat_index_f { get; set; }
-        public string heat_index_c { get; set; }
-        public string windchill_string { get; set; }
-        public string windchill_f { get; set; }
-        public string windchill_c { get; set; }
-        public string feelslike_string { get; set; }
-        public string feelslike_f { get; set; }
-        public string feelslike_c { get; set; }
-        public string visibility_mi { get; set; }
-        public string visibility_km { get; set; }
-        public string solarradiation { get; set; }
-        public string UV { get; set; }
-        public string precip_1h_string { get; set; }
-        public string precip_1h_in { get; set; }
-        public string precip_1h_metric { get; set; }
-        public string precip_today_string { get; set; }
-        public string precip_today_in { get; set; }
-        public string precip_today_metric { get; set; }
-        public string icon { get; set; }
-        public string icon_url { get; set; }
-        public string forecast_url { get; set; }
-        public string history_url { get; set; }
-        public string ob_url { get; set; }
+        private string full;
+
+        public string Full
+        {
+            get { return full; }
+            set
+            {
+                full = value;
+                OnPropertyChanged("Full");
+            }
+        }
+
+        private string city;
+
+        public string City
+        {
+            get { return city; }
+            set
+            {
+                city = value;
+                OnPropertyChanged("City");
+            }
+        }
+
+        private string state;
+
+        public string State
+        {
+            get { return state; }
+            set
+            {
+                state = value;
+                OnPropertyChanged("State");
+            }
+        }
+
+        private string country;
+
+        public string Country
+        {
+            get { return country; }
+            set
+            {
+                country = value;
+                OnPropertyChanged("Country");
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 
-    public class Response
+    public class CurrentObservation : INotifyPropertyChanged
     {
-        public string version { get; set; }
-        public string termsofService { get; set; }
-        public Features features { get; set; }
+        private Image image;
+
+        public Image Image
+        {
+            get { return image; }
+            set
+            {
+                image = value;
+                OnPropertyChanged("Image");
+            }
+        }
+
+        private Location display_location;
+
+        public Location Display_Location
+        {
+            get { return display_location; }
+            set
+            {
+                display_location = value;
+                OnPropertyChanged("Display_Location");
+            }
+        }
+
+        private Location observation_location;
+
+        public Location Observation_Location
+        {
+            get { return observation_location; }
+            set
+            {
+                observation_location = value;
+                OnPropertyChanged("Observation_Location");
+            }
+        }
+
+        private string weather;
+
+        public string Weather
+        {
+            get { return weather; }
+            set
+            {
+                weather = value;
+                OnPropertyChanged("Weather");
+            }
+        }
+
+        private string temperature_string;
+
+        public string Temperature_String
+        {
+            get { return temperature_string; }
+            set
+            {
+                temperature_string = value;
+                OnPropertyChanged("Temperature_String");
+            }
+        }
+
+        private double temp_f;
+
+        public double Temp_F
+        {
+            get { return temp_f; }
+            set
+            {
+                temp_f = value;
+                OnPropertyChanged("Temp_F");
+            }
+        }
+
+        private double temp_c;
+
+        public double Temp_C
+        {
+            get { return temp_c; }
+            set
+            {
+                temp_c = value;
+                OnPropertyChanged("Temp_C");
+            }
+        }
+
+        private string wind_string;
+
+        public string Wind_String
+        {
+            get { return wind_string; }
+            set
+            {
+                wind_string = value;
+                OnPropertyChanged("Wind_String");
+            }
+        }
+
+        private string uv;
+
+        public string UV
+        {
+            get { return uv; }
+            set
+            {
+                uv = value;
+                OnPropertyChanged("UV");
+            }
+        }
+
+        private string precip_today_string;
+
+        public string Precip_Today_String
+        {
+            get { return precip_today_string; }
+            set
+            {
+                precip_today_string = value;
+                OnPropertyChanged("Precip_Today_String");
+            }
+        }
+
+        private string icon;
+
+        public string Icon
+        {
+            get { return icon; }
+            set
+            {
+                icon = value;
+                OnPropertyChanged("Icon");
+            }
+        }
+
+        private string icon_url;
+
+        public string Icon_Url
+        {
+            get { return icon_url; }
+            set
+            {
+                icon_url = value;
+                OnPropertyChanged("Icon_Url");
+            }
+        }
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 
-    public class Features
+    public class WeatherUnderground : INotifyPropertyChanged
     {
-        public int conditions { get; set; }
-    }
+        private CurrentObservation current_observation;
 
-    public class Location
-    {
-        public string full { get; set; }
-        public string city { get; set; }
-        public string state { get; set; }
-        public string state_name { get; set; }
-        public string country { get; set; }
-        public string country_iso3166 { get; set; }
-        public string zip { get; set; }
-        public string latitude { get; set; }
-        public string longitude { get; set; }
-        public string elevation { get; set; }
+        public CurrentObservation Current_Observation
+        {
+            get { return current_observation; }
+            set
+            {
+                current_observation = value;
+                OnPropertyChanged("Current_Observation");
+            }
+        }
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }
