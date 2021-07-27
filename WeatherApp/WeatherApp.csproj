@@ -65,6 +65,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="View\AccuWeatherWindow.xaml.cs">
+      <DependentUpon>AccuWeatherWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\WeatherUndergroundWindow.xaml.cs">
       <DependentUpon>WeatherUndergroundWindow.xaml</DependentUpon>
     </Compile>
@@ -99,6 +102,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Page Include="View\AccuWeatherWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\WeatherUndergroundWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
