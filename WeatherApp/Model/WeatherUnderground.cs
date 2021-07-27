@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace WeatherApp.Model
 {
@@ -288,8 +289,29 @@ namespace WeatherApp.Model
             }
         }
 
-
         public event PropertyChangedEventHandler PropertyChanged;
+
+        public WeatherUnderground()
+        {
+            if (DesignerProperties.GetIsInDesignMode(new DependencyObject()))Current_Observation = new CurrentObservation()
+            {
+                Display_Location = new Location()
+                {
+                    City = "New York",
+                    Country = "US"
+                },
+                Observation_Location = new Location()
+                {
+                    City = "New York",
+                    Country = "US"
+                },
+                Precip_Today_String = "15mm",
+                Temperature_String = "21 C",
+                UV = "7",
+                Weather = "sunny",
+                Wind_String = "12 Kph NE"
+            };
+        }
 
         private void OnPropertyChanged(string propertyName)
         {
