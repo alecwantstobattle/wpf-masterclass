@@ -4,30 +4,39 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherApp.View"
+        xmlns:vm="clr-namespace:WeatherApp.ViewModel"
         mc:Ignorable="d"
         Title="AccuWeatherWindow" Height="450" Width="800">
-    <Grid>
+    
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#555555"/>
+        </Style>
+        <vm:AccuWeatherVM x:Key="vm" />
+    </Window.Resources>
+    <Grid DataContext="{StaticResource vm}">
         <StackPanel Margin="10">
             <TextBox/>
             <TextBlock Text="Mexico City" 
                        Margin="0 20 0 0"
                        FontSize="20"
                        FontWeight="Bold"/>
-            <ListView Margin="0 30 0 0">
+            <ListView Margin="0 30 0 0"
+                      ItemsSource="{Binding AccuWeather.DailyForecasts}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
-                            <TextBlock Text="Date"
+                            <TextBlock Text="{Binding Date}"
                                        FontSize="20"
                                        FontWeight="Bold"/>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Minimum"
+                                <TextBlock Text="{Binding Temperature.Minimum.Value}"
                                            Margin="0 0 10 0"
-                                           FontSize="20"
+                                           FontSize="18"
                                            FontWeight="Bold"/>
-                                <TextBlock Text="Maximum"
+                                <TextBlock Text="{Binding Temperature.Maximum.Value}"
                                            Margin="0 0 10 0"
-                                           FontSize="20"
+                                           FontSize="18"
                                            FontWeight="Bold"/>
                             </StackPanel>
                         </StackPanel>

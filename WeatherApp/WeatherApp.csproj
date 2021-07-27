@@ -60,6 +60,7 @@
     </ApplicationDefinition>
     <Compile Include="Model\AccuWeather.cs" />
     <Compile Include="ViewModel\AccuWeatherAPI.cs" />
+    <Compile Include="ViewModel\AccuWeatherVM.cs" />
     <Compile Include="ViewModel\WeatherUndergroundAPI.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
